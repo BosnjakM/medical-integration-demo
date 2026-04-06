@@ -91,15 +91,6 @@ medical-interfaces-demo/
     ├── data/dicom/         # .dcm nach download-dicom / vercel-build
     └── scripts/download-dicom-samples.js
 ```
-
-## Deploy auf Vercel (inkl. Firmen-Subdomain)
-
-1. **Repository** mit diesem Ordner verbinden. Liegt das Repo eine Ebene höher (z. B. `Schiller/`), in Vercel unter **Project → Settings → General → Root Directory** `medical-interfaces-demo` eintragen.
-2. **Build & Output:** sind über `vercel.json` und `vercel-build` gesetzt: DICOM-Samples werden beim Build geladen, React wird nach `public/` kopiert. **Root Directory** muss der Ordner sein, in dem `vercel.json` und `app.mjs` liegen.
-3. **Express auf Vercel:** `app.mjs` exportiert die API; statische Dateien kommen aus **`public/`** (Vercel-CDN). `express.static` im lokalen `server/index.js` wird auf Vercel nicht für das Frontend genutzt.
-4. **Subdomain deiner Firma:** Vercel → **Project → Settings → Domains** → Domain hinzufügen (z. B. `demo.deine-firma.de`). Beim DNS-Provider einen **CNAME** auf `cname.vercel-dns.com` setzen (Vercel zeigt dir den exakten Wert).
-5. **Einschränkungen auf Vercel:** Das Dateisystem der Functions ist **read-only** (außer `/tmp`). **POST** (HL7 anlegen, GDT speichern, DICOM-Upload nach `data/`) liefert dort **503** mit Hinweis; Lesen und Anzeige funktionieren.
-
 Lokal testen wie auf Vercel (optional): [Vercel CLI](https://vercel.com/docs/cli) installieren, im Projektordner `vercel dev`.
 
 ## Lizenz-Hinweis
