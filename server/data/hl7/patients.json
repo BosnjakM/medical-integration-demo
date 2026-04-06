@@ -1,0 +1,157 @@
+[
+  {
+    "id": "P001",
+    "messageType": "ADT^A01",
+    "description": "Patientenaufnahme (Admit)",
+    "rawHl7": "MSH|^~\\&|KIS|Krankenhaus|LIS|Lab|202604021200||ADT^A01|MSG001|P|2.5\rEVN|A01|202604021200\rPID|1||P001^^^KIS^MR||Müller^Anna||19850315|F|||Musterstraße 1^^Berlin^^10115^DE||(030)12345678|||S|DEU|1234567890",
+    "parsed": {
+      "patientId": "P001",
+      "familyName": "Müller",
+      "givenName": "Anna",
+      "birthDate": "19850315",
+      "sex": "F",
+      "address": "Musterstraße 1, 10115 Berlin",
+      "phone": "(030)12345678"
+    }
+  },
+  {
+    "id": "P002",
+    "messageType": "ADT^A04",
+    "description": "Patient registriert (Register)",
+    "rawHl7": "MSH|^~\\&|KIS|KH|RIS|Radiologie|202604021205||ADT^A04|MSG002|P|2.5\rPID|1||P002^^^KIS^MR||Schmidt^Thomas||19721122|M|||Hauptweg 5^^München^^80331^DE||",
+    "parsed": {
+      "patientId": "P002",
+      "familyName": "Schmidt",
+      "givenName": "Thomas",
+      "birthDate": "19721122",
+      "sex": "M",
+      "address": "Hauptweg 5, 80331 München",
+      "phone": ""
+    }
+  },
+  {
+    "id": "P003",
+    "messageType": "ORM^O01",
+    "description": "Laborauftrag (Order)",
+    "rawHl7": "MSH|^~\\&|KIS|KH|LIS|Lab|202604021210||ORM^O01|MSG003|P|2.5\rPID|1||P003^^^KIS^MR||Weber^Lisa||19990101|F|||\rORC|NW|ORD-1001|||||202604021210\rOBR|1|ORD-1001||GLU^Glukose^LN|||||||202604021210",
+    "parsed": {
+      "patientId": "P003",
+      "familyName": "Weber",
+      "givenName": "Lisa",
+      "birthDate": "19990101",
+      "sex": "F",
+      "orderId": "ORD-1001",
+      "testCode": "GLU",
+      "testName": "Glukose"
+    }
+  },
+  {
+    "id": "P004",
+    "messageType": "ORU^R01",
+    "description": "Laborergebnis (Observation Result)",
+    "rawHl7": "MSH|^~\\&|LIS|Lab|KIS|KH|202604021215||ORU^R01|MSG004|P|2.5\rPID|1||P004^^^KIS^MR||Fischer^Jonas||19880808|M|||\rOBR|1|ORD-1002||CREA^Kreatinin^LN\rOBX|1|NM|CREA^Kreatinin||1.1|mg/dL|0.7-1.3|N|||F",
+    "parsed": {
+      "patientId": "P004",
+      "familyName": "Fischer",
+      "givenName": "Jonas",
+      "birthDate": "19880808",
+      "sex": "M",
+      "observation": "Kreatinin",
+      "value": "1.1",
+      "unit": "mg/dL",
+      "referenceRange": "0.7-1.3",
+      "abnormalFlag": "N"
+    }
+  },
+  {
+    "id": "P005",
+    "messageType": "ADT^A03",
+    "description": "Patient entlassen (Discharge)",
+    "rawHl7": "MSH|^~\\&|KIS|KH|PFLEGE|STAT|202604021220||ADT^A03|MSG005|P|2.5\rPID|1||P005^^^KIS^MR||Becker^Sara||19660606|F|||\rPV1|1|I|INT^101^A^KH||||DOC123^Hausmann^Peter|||MED|||||||DIS|202604021220",
+    "parsed": {
+      "patientId": "P005",
+      "familyName": "Becker",
+      "givenName": "Sara",
+      "birthDate": "19660606",
+      "sex": "F",
+      "dischargeTime": "202604021220",
+      "attendingPhysician": "Hausmann, Peter"
+    }
+  },
+  {
+    "id": "P006",
+    "messageType": "ADT^A08",
+    "description": "Patientendaten aktualisiert",
+    "rawHl7": "MSH|^~\\&|KIS|KH|KIS|KH|202604021225||ADT^A08|MSG006|P|2.5\rPID|1||P006^^^KIS^MR||Koch^Michael||20001212|M|||Neue Straße 9^^Hamburg^^20095^DE||(040)987654",
+    "parsed": {
+      "patientId": "P006",
+      "familyName": "Koch",
+      "givenName": "Michael",
+      "birthDate": "20001212",
+      "sex": "M",
+      "address": "Neue Straße 9, 20095 Hamburg",
+      "phone": "(040)987654"
+    }
+  },
+  {
+    "id": "P007",
+    "messageType": "SIU^S12",
+    "description": "Terminbenachrichtigung (Scheduling)",
+    "rawHl7": "MSH|^~\\&|KIS|KH|RIS|Rad|202604021230||SIU^S12|MSG007|P|2.5\rPID|1||P007^^^KIS^MR||Wagner^Julia||19930303|F|||\rSCH|1|APT-5001||||202604051400|202604051430|15|MIN|MRI Kopf",
+    "parsed": {
+      "patientId": "P007",
+      "familyName": "Wagner",
+      "givenName": "Julia",
+      "birthDate": "19930303",
+      "sex": "F",
+      "appointmentId": "APT-5001",
+      "start": "202604051400",
+      "procedure": "MRI Kopf"
+    }
+  },
+  {
+    "id": "P008",
+    "messageType": "ADT^A01",
+    "description": "Per Formular simuliert",
+    "rawHl7": "MSH|...|ADT^A01|DEMO|P|2.5\rPID|1||P008^^^DEMO",
+    "parsed": {
+      "patientId": "P-DEMO",
+      "familyName": "Mustermann",
+      "givenName": "Max",
+      "birthDate": "19900101",
+      "sex": "O",
+      "address": "",
+      "phone": ""
+    }
+  },
+  {
+    "id": "P009",
+    "messageType": "ADT^A01",
+    "description": "Per Formular simuliert",
+    "rawHl7": "MSH|...|ADT^A01|DEMO|P|2.5\rPID|1||P009^^^DEMO",
+    "parsed": {
+      "patientId": "P-DEMO",
+      "familyName": "Mustermann",
+      "givenName": "Max",
+      "birthDate": "19900101",
+      "sex": "O",
+      "address": "",
+      "phone": ""
+    }
+  },
+  {
+    "id": "P010",
+    "messageType": "ADT^A01",
+    "description": "Per Formular simuliert",
+    "rawHl7": "MSH|...|ADT^A01|DEMO|P|2.5\rPID|1||P010^^^DEMO",
+    "parsed": {
+      "patientId": "P-DEMO",
+      "familyName": "Mustermann",
+      "givenName": "Max",
+      "birthDate": "19900101",
+      "sex": "O",
+      "address": "",
+      "phone": ""
+    }
+  }
+]

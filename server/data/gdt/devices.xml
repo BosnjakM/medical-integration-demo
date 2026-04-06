@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdtBatch source="MockLabor" version="2.1" created="2026-04-02T12:00:00">
+  <deviceRecord gdtId="GDT-001" deviceType="Blutdruck">
+    <field id="3000" name="Patientennummer">PAT-7788</field>
+    <field id="3101" name="Nachname">Neumann</field>
+    <field id="3102" name="Vorname">Frank</field>
+    <field id="3103" name="Geburtsdatum">15.06.1975</field>
+    <field id="8410" name="Messzeit">02.04.2026 08:15</field>
+    <field id="8420" name="Systolisch mmHg">128</field>
+    <field id="8421" name="Diastolisch mmHg">82</field>
+    <field id="8422" name="Puls /min">72</field>
+  </deviceRecord>
+  <deviceRecord gdtId="GDT-002" deviceType="EKG">
+    <field id="3000" name="Patientennummer">PAT-8899</field>
+    <field id="3101" name="Nachname">Lang</field>
+    <field id="3102" name="Vorname">Petra</field>
+    <field id="3103" name="Geburtsdatum">22.09.1982</field>
+    <field id="8410" name="Messzeit">02.04.2026 09:00</field>
+    <field id="2501" name="HF /min">68</field>
+    <field id="2503" name="QRS ms">92</field>
+    <field id="2504" name="QT ms">410</field>
+  </deviceRecord>
+  <deviceRecord gdtId="GDT-003" deviceType="Spirometrie">
+    <field id="3000" name="Patientennummer">PAT-9900</field>
+    <field id="3101" name="Nachname">Öztürk</field>
+    <field id="3102" name="Vorname">Deniz</field>
+    <field id="3103" name="Geburtsdatum">03.01.1990</field>
+    <field id="8410" name="Messzeit">02.04.2026 09:30</field>
+    <field id="7320" name="FEV1 L">3.45</field>
+    <field id="7321" name="FVC L">4.10</field>
+    <field id="7322" name="FEV1/FVC %">84</field>
+  </deviceRecord>
+  <deviceRecord gdtId="GDT-004" deviceType="Blutzucker">
+    <field id="3000" name="Patientennummer">PAT-1122</field>
+    <field id="3101" name="Nachname">Hoffmann</field>
+    <field id="3102" name="Vorname">Clara</field>
+    <field id="3103" name="Geburtsdatum">11.11.1968</field>
+    <field id="8410" name="Messzeit">02.04.2026 10:05</field>
+    <field id="2505" name="Glukose mg/dL">98</field>
+    <field id="2506" name="Messart">nüchtern</field>
+  </deviceRecord>
+  <deviceRecord gdtId="GDT-005" deviceType="Thermometer">
+    <field id="3000" name="Patientennummer">PAT-3344</field>
+    <field id="3101" name="Nachname">Krüger</field>
+    <field id="3102" name="Vorname">Tim</field>
+    <field id="3103" name="Geburtsdatum">07.07.2005</field>
+    <field id="8410" name="Messzeit">02.04.2026 10:30</field>
+    <field id="2507" name="Temperatur °C">36.8</field>
+    <field id="2508" name="Messort">Ohr</field>
+  </deviceRecord>
+</gdtBatch>

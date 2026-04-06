@@ -1,0 +1,18 @@
+{
+  "name": "medical-interfaces-server",
+  "version": "1.0.0",
+  "description": "Einfacher Express-Server für HL7-, GDT- und DICOM-Demo (Mock-Daten)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "download-dicom": "node scripts/download-dicom-samples.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dicom-parser": "^1.8.21",
+    "express": "^4.21.0",
+    "multer": "^2.0.0"
+  }
+}
